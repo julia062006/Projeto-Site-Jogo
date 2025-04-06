@@ -16,6 +16,8 @@ body {
 }
 
 .header {
+    width: 100%;
+    position: fixed;
     background-color: #222;
     .header-logo {
         img {
