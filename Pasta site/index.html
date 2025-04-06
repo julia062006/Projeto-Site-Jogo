@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Volta à Cova</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="imagens/logo-tipo.png">
+     <link rel="stylesheet" href="fontawesome-web/css/all.min.css">
+        <link rel="stylesheet" href="CSS/aos.min.css">
+        <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" title="Home" class="header-logo">
+                <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova">
+            </a>
+
+            <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" title="Home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="sobre.html" title="Sobre">Sobre</a>
+                    </li>
+
+                    <li>
+                        <a href="galeria-fotos.html" title="Galeria de Fotos">Galeria de Fotos</a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html" title="Contato">Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="jogar.html" class="btn" title="Jogar">Jogar</a> 
+                        
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <script src="jquery"></script>
+    <script src="aos.js"></script>
+       <script>
+        function mostrarMenu () {
+            //document.querySelector(".nav-menu") isso faz a mesma coisa de a linha 60
+            $(".header-nav").toggle(); //esse toggle mostra e desmostra a barra de navegar
+        }
+    </script>
+</body>
+</html>
