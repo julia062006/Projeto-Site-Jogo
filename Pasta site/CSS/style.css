@@ -1,8 +1,7 @@
-
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,125 +10,195 @@ body {
     font-size: 18px;
 }
 
-.container {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    padding: 10px;
-    flex-direction: column;
-}
-
+/* HEADER FIXO NO TOPO */
 .header {
     width: 100%;
     position: fixed;
     background-color: #222;
-   
-    .header-logo {
-            height: 80px;
-    }
-    .header-menu {
-        color: white;
-        display: inline-block;
-        font-size: 2em;
-        padding: 10px;
-        margin: 10px;
-    }
-    .header-nav {
-       
-        padding: 10px;
-        margin: 10px;
-        text-align: center;
-        display: none;
-        ul {
-            list-style: none;
-            li{
-                padding: 10px;
-                a {
-                    text-transform: uppercase;
-                    color: #ccc;
-                    text-decoration: none;
-                    font-weight: bold;
-                }
-            }
-        }
-    }
+    z-index: 1000;
 }
- 
+
+/* CONTAINER GERAL DO HEADER */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+    position: relative;
+}
+
+/* LOGO */
+.header-logo {
+    height: 50px;
+}
+
+/* BOTÃO HAMBURGUER (3 BARRAS) */
+.header-menu {
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    margin-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    display: block; /* aparece no mobile por padrão */
+    cursor: pointer;
+}
+
+/* NAVEGAÇÃO (ESCONDIDA POR PADRÃO NO MOBILE) */
+.header-nav {
+    display: none;
+    background-color: #222;
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    position: relative;
+    right: 0;
+    top: 100%;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    padding: 10px;
+    text-align: center;
+}
+
+.header-nav a {
+    text-transform: uppercase;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.header-nav a:hover {
+    color: white;
+}
+
+/* BOTÃO JOGAR */
 .btn {
-    background-color:rgb(9, 83, 25) ;
+    background-color: rgb(59, 111, 59);
     color: white;
     text-decoration: none;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;  
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.home-jogabilidade {
+    padding-top: 100px;
+    color: white;
+    background-color: black;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* empilha a logo e o texto */
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.imagem-footer {
+    height: 40px;
+    margin-bottom: 5px;
 }
 
 
 
-/* Regra pa telas maiores que 1000px*/
+
+/* DESKTOP */
 @media screen and (min-width: 1000px) {
     .header {
-        .header-menu {
-            display: none;
-            border: none;
-            
-           
-        }
-        .header-nav {
-            display: block;
-            float: right;
-            border: none;
-            
-            ul {
-                li {
-                    display: inline-block;
-                    a:hover {
-                        color: white;
-                        border-bottom: 5px solid rgb(59, 111, 59);
-                        padding: 27px;
-                    }
-                    a {
-                        padding: 27px;
-                        
-                    }
-                }
-            }
-        }
-        .container {
-            flex-direction: row; 
-            justify-content: flex-end;
-           
-        }   
-        .header-logo {
-            display: block; /* Garante que a imagem seja tratada como um bloco */
-            margin: 0; /* Remove qualquer margem */
-        }
-        .btn {
-            background-color:  rgb(59, 111, 59) ;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px 10px 20px;
-            margin: 10px;
-            border-radius: 10px;  
-        }
-        .btn:hover {
-            color: white;
-            background-color:  rgb(59, 111, 59);
-            
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
     
-        }
+    .header-menu {
+        display: none; /* Esconde o menu hamburguer no desktop */
     }
-    .footer {
-            background-color: #333;  /* fundo escuro */
-            color: white;           /* texto branco */
-            text-align: center;     /* texto centralizado */
-            padding: 20px;          /* espaço interno */
-            position: fixed;        /* fixado no rodapé da tela */
-            bottom: 0;
-            width: 100px;
-    }
-}/* Final da regra*/
 
+    .header-logo {
+        height: 80px;
+    }
+
+    .header-nav {
+        display: block;
+        width: auto;
+        padding: 10px;
+        flex-direction: row;
+        position: static;
+        margin-right: auto;
+        align-items: center;
+        right: 0;
+    }
+
+    .header-nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        list-style: none;
+        margin: 10px;
+        padding: 0;
+    }
+
+    .header-nav li {
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .header-nav a {
+        padding: 27px;
+    }
+
+    .header-nav a:hover {
+        color: white;
+        border-bottom: 5px solid rgb(59, 111, 59);
+    }
+    .header-nav ul li a {
+        white-space: nowrap;
+    }
+
+    .home-jogabilidade {
+        padding-top: 200px;
+    }
+
+    .footer {
+        background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* alinha verticalmente */
+    justify-content: center; /* imagem à esquerda e texto à direita */
+    height: auto;
+    }
+
+    .imagem-footer {
+        height: 40px;
+        margin-bottom: 5px;
+    }
+
+
+}
