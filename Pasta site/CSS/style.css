@@ -1,10 +1,12 @@
+
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Tiny5, Arial;
+    font-family: "Jersey 15", Arial;
     color: #333;
     font-size: 18px;
 }
@@ -13,19 +15,22 @@ body {
     text-align: center;
     width: 100%;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 10px;
+    flex-direction: column;
 }
 
 .header {
     width: 100%;
     position: fixed;
     background-color: #222;
+   
     .header-logo {
-        img {
             height: 80px;
-        }
     }
     .header-menu {
-        border: 1px solid white;
         color: white;
         display: inline-block;
         font-size: 2em;
@@ -33,7 +38,7 @@ body {
         margin: 10px;
     }
     .header-nav {
-        border: 1px solid white;
+       
         padding: 10px;
         margin: 10px;
         text-align: center;
@@ -48,30 +53,36 @@ body {
                     text-decoration: none;
                     font-weight: bold;
                 }
-                
             }
         }
     }
 }
  
 .btn {
-    background-color:rgb(59, 111, 59) ;
+    background-color:rgb(9, 83, 25) ;
     color: white;
     text-decoration: none;
-    padding: 10px 20px 10px 20px;
+    padding: 10px;
     margin: 10px;
-    border-radius: 10px;    
+    border-radius: 10px;  
 }
 
-@media (min-width: 1000px) {
+
+
+/* Regra pa telas maiores que 1000px*/
+@media screen and (min-width: 1000px) {
     .header {
         .header-menu {
             display: none;
+            border: none;
+            
+           
         }
         .header-nav {
             display: block;
             float: right;
-            border: 0;
+            border: none;
+            
             ul {
                 li {
                     display: inline-block;
@@ -82,9 +93,43 @@ body {
                     }
                     a {
                         padding: 27px;
+                        
                     }
                 }
             }
         }
+        .container {
+            flex-direction: row; 
+            justify-content: flex-end;
+           
+        }   
+        .header-logo {
+            display: block; /* Garante que a imagem seja tratada como um bloco */
+            margin: 0; /* Remove qualquer margem */
+        }
+        .btn {
+            background-color:  rgb(59, 111, 59) ;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px 10px 20px;
+            margin: 10px;
+            border-radius: 10px;  
+        }
+        .btn:hover {
+            color: white;
+            background-color:  rgb(59, 111, 59);
+            
+    
+        }
     }
-}
+    .footer {
+            background-color: #333;  /* fundo escuro */
+            color: white;           /* texto branco */
+            text-align: center;     /* texto centralizado */
+            padding: 20px;          /* espaço interno */
+            position: fixed;        /* fixado no rodapé da tela */
+            bottom: 0;
+            width: 100px;
+    }
+}/* Final da regra*/
+
