@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De Volta à Cova</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" href="imagens/logo-tipo.png">
-     <link rel="stylesheet" href="fontawesome-web/css/all.min.css">
-        <link rel="stylesheet" href="CSS/aos.min.css">
-        <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="fontawesome-web/css/all.min.css">
+    <link rel="stylesheet" href="CSS/aos.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
-                <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" title="Home" class="header-logo">
+            <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" title="Home" class="header-logo">
 
             <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
                 <i class="fa-solid fa-bars"></i>
@@ -42,8 +44,8 @@
                     </li>
 
                     <li>
-                        <a href="jogar.html" class="btn" title="Jogar">Jogar</a> 
-                        
+                        <a href="jogar.html" class="btn" title="Jogar">Jogar</a>
+
                     </li>
                 </ul>
             </nav>
@@ -51,12 +53,44 @@
     </header>
 
     <main>
-        <h1>Sobre o Jogo</h1 class="home-jogabilidade">
-        <p class="paragrafo-sobre"> 
-            Descubra "Zumbi em Busca da Cova", uma aventura emocionante onde você ajuda um zumbi a retornar à sua cova. <br>
-            Com jogabilidade acessível para crianças e adolescentes, enfrente desafios e inimigos em uma floresta sombria. <br>
-            Prepare-se para a diversão!
+        <h1 class="titulo">Sobre o Jogo</h1>
+        <p class="paragrafo-sobre">
+            Descubra "De Volta à Cova", uma aventura emocionante onde você ajuda um zumbi a retornar à sua cova.
+            Possuíndo jogabilidade acessível para todas as idades. Prepare-se para a diversão!
         </p>
+        <h1 class="titulo">Um pouco mais da história do Game</h1>
+        <p class="paragrafo-sobre">Durante o jogo ajude um zumbi a superar desafios em uma floresta. Explore duas fases
+            com obstáculos,<br> enquanto coleta cérebros. Com gráficos vibrantes e trilha sonora envolvente garantem
+            diversão na aventura de voltar para casa!</p>
+        <img src="imagens/banner.png" alt="Objetos do Jogo" class="banner">
+
+        <h1 class="titulo">Narrativa</h1>
+        <p class="paragrafo-sobre">
+            Você é um zumbi que despertou em uma floresta desconhecida. Agora, precisa retornar à sua cova, enfrentando
+            o Caçador e superando desafios ao longo do caminho.
+            Durante sua jornada, use sua astúcia e habilidades para desviar dos perigos. Complete as duas fases
+            emocionantes, coletando sua comida preferida.
+            Prepare-se para aventura! Boa sorte!
+        </p>
+
+        <a href="jogar.html" class="btn-jogar" title="Jogar">Jogar</a>
+            <h1 class="titulo">Galeria de fotos</h1>
+        <!--aqui colocar as imagens do jogo<div>
+
+            </div> -->
+
+        <section>
+            <h1 class="titulo">Contato</h1>
+            <form id="form">
+                <label for="Nome:"></label>
+                <input type="text" id="nome">
+                <label for="E-mail:"></label>
+                <input type="email" id="email">
+                <label for="Telefone:"></label>
+                <input type="text" id="telefone">
+                <button type="button" id="botao">Enviar</button>
+            </form>
+        </section>
     </main>
 
     <footer class="footer">
@@ -68,13 +102,54 @@
         </p>
     </footer>
 
+            <script>
+                //Captura o botão pelo ID e adiciona um evento de clique//
+                document.getElementById('botao').onclick = function() {
+                    //Obtém o valor do campo "nome"
+                    var nome = document.getElementById('nome').value;
+                    //Obtém o valor do campo "email"
+                    var email = document.getElementById('email').value;
+                    //Obtém o valor do campo "telefone"
+                    var telefone = document.getElementById('telefone'). value;
+
+                    //Verifica se todos os campos estão vazios ao mesmo tempo
+                    if (nome == "" && email == "" && telefone == "") {
+                        alert("Por favor, preencha todos os campos"); //Exibe um alerta para informar que todos os campos estão vazios
+                    }else {
+                        //Verifica individualmente se o campo "nome" está vazio
+                        if(nome == "") {
+                            alert("Informe o nome"); // Exibe um alerta caso o campo "nome" está vazio
+                        }
+
+                        //Verifica individualmente se o campo "email" está vazio
+                        if(email == "" || !email.includes("@")) {
+                            alert("Informe um email válido");
+                        return;
+                        }
+                         //Exibe um alerta caso o campo "email" esteja vazio
+                        
+
+                        //Verifica individualmente se o campo "Telefone" está vazio
+                        if(telefone == "") {
+                            alert("Informe o telefone"); // Exibe um alerta caso o campo "telefone" esteja vazio
+                        }
+                    }
+
+                    // confirma que todos os campos foram preenchidos
+                    if(nome != "" && email != "" && telefone != "") {
+                        alert("Formulário enviado com sucesso!"); //Exibe um alerta de sucesso informando que o formulario foi enviado
+                    }
+                };
+            </script>
+
     <script src="jquery"></script>
     <script src="aos.js"></script>
-       <script>
-        function mostrarMenu () {
+    <script>
+        function mostrarMenu() {
             //document.querySelector(".nav-menu") isso faz a mesma coisa de a linha 60
             $(".header-nav").toggle(); //esse toggle mostra e desmostra a barra de navegar
         }
     </script>
 </body>
+
 </html>

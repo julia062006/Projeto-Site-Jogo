@@ -16,6 +16,7 @@ body {
     position: fixed;
     background-color: #222;
     z-index: 1000;
+    top: 0;
 }
 
 /* CONTAINER GERAL DO HEADER */
@@ -95,11 +96,50 @@ body {
     display: inline-block;
 }
 
-.home-jogabilidade {
-    padding-top: 100px;
+.btn-jogar {
+    background-color: rgb(27, 208, 132);
     color: white;
-    background-color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: inline-block;
 }
+
+main {
+    width: auto;
+    padding-top: 100px;
+    color: black;
+    background-color: rgb(231, 231, 231);
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 15px;
+}
+
+.titulo {
+    background-color: rgb(59, 111, 59);
+    padding: 10px;
+    margin: 0 auto;
+    width: 300px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    display: inline-block; 
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.paragrafo-sobre {
+    margin-top: 15px;
+}
+
+.banner {
+    height: 400px;
+    padding-bottom: 1px;
+
+}
+
 
 .footer {
     background-color: #333;
@@ -177,8 +217,10 @@ body {
         white-space: nowrap;
     }
 
-    .home-jogabilidade {
-        padding-top: 200px;
+    main {
+        padding-top: 180px;
+        color: black;
+        text-align: center;
     }
 
     .footer {
@@ -200,5 +242,14 @@ body {
         margin-bottom: 5px;
     }
 
-
+    .titulo {
+        background-color: rgb(59, 111, 59);
+        padding: 10px;
+        margin: 0 auto;
+        width: 200px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        display: inline-block; 
+    }
 }
