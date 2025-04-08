@@ -97,13 +97,14 @@ body {
 }
 
 .btn-jogar {
-    background-color: rgb(27, 208, 132);
+    background-color: rgb(59, 111, 59);
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    margin: 10px 0;
+    margin: 30px;
     border-radius: 10px;
     display: inline-block;
+    width: 200px;
 }
 
 main {
@@ -115,19 +116,58 @@ main {
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 15px;
+    letter-spacing: 0.5px;
+   
 }
 
 .titulo {
-    background-color: rgb(59, 111, 59);
     padding: 10px;
-    margin: 0 auto;
+    margin: 25px;
     width: 300px;
     text-transform: uppercase;
     text-align: center;
-    color: white;
+    color: rgb(59, 111, 59);
     display: inline-block; 
     border-radius: 10px;
     margin-top: 15px;
+    box-shadow: 10px 5px 10px rgb(106, 3, 225);
+}
+
+p {
+    margin: 25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 350px;
+    margin: 0 auto;
+   
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 2px;
+    border: 1px solid black ;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    color: white;
+    background-color: rgb(27, 208, 132);
+    width: 100px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
 }
 
 .paragrafo-sobre {
