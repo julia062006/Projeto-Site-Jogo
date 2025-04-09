@@ -292,4 +292,37 @@ button {
         color: white;
         display: inline-block; 
     }
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        width: 400px;
+        margin: 0 auto;
+       
+    }
+    
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black ;
+        border-radius: 5px;
+        font-size: 1.1rem;
+    }
+    
+    button {
+        color: white;
+        background-color: rgb(27, 208, 132);
+        width: 100px;
+        text-align: center;
+        margin: 10px auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
 }

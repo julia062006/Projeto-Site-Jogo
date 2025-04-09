@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="fontawesome-web/css/all.min.css">
     <link rel="stylesheet" href="CSS/aos.min.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="scipts.js" defer></script>
 </head>
 
 <body>
@@ -66,33 +67,34 @@
 
         <h1 class="titulo">Narrativa</h1>
         <p class="paragrafo-sobre">
-            De Volta à Cova é um jogo de aventura/plataforma, na qual o Zombie despertou em uma floresta desconhecida. Agora, ele precisa retornar à sua cova, enfrentando
+            De Volta à Cova é um jogo de aventura/plataforma, na qual o Zombie despertou em uma floresta desconhecida.
+            Agora, ele precisa retornar à sua cova, enfrentando
             o Caçador e superando desafios ao longo da trajetória.
-            Durante sua jornada, use sua astúcia e habilidades para desviar dos perigos. Complete as duas fases, coletando sua comida preferida.
-            <br>Com jogabilidade fácil, De Volta à Cova foi pensado em agradar jogadores de várias idades. Prepare-se para aventura!
+            Durante sua jornada, use sua astúcia e habilidades para desviar dos perigos. Complete as duas fases,
+            coletando sua comida preferida.
+            <br>Com jogabilidade fácil, De Volta à Cova foi pensado em agradar jogadores de várias idades. Prepare-se
+            para aventura!
         </p>
 
         <a href="jogar.html" class="btn-jogar" title="Jogar">Jogar</a>
-            <h1 class="titulo">Galeria de fotos</h1>
+        <h1 class="titulo">Galeria de fotos</h1>
         <!--aqui colocar as imagens do jogo<div>
 
             </div> -->
 
-        <section>
-            <h1 class="titulo">Contato</h1>
-            <form id="form" class="form">
-                <label for="Nome:"></label>
-                <input type="text" id="nome">
+        <h1 class="titulo">Contato</h1>
+        <form id="form">
+            <label for="name">Digite seu nome:</label>
+            <input type="text" id="name">
 
-                <label for="E-mail:"></label>
-                <input type="email" id="email">
+            <label for="email">Digite seu e-mail:</label>
+            <input type="email" id="email">
 
-                <label for="Telefone:"></label>
-                <input type="text" id="telefone">
+            <label for="message">Mensagem:</label>
+            <textarea name="message" id="message"></textarea>
 
-                <button type="button" id="botao">Enviar</button>
-            </form>
-        </section>
+            <button type="submit">Enviar</button>
+        </form>
     </main>
 
     <footer class="footer">
@@ -104,48 +106,55 @@
         </p>
     </footer>
 
-            <script>
-                //Captura o botão pelo ID e adiciona um evento de clique//
-                document.getElementById('botao').onclick = function() {
-                    //Obtém o valor do campo "nome"
-                    var nome = document.getElementById('nome').value;
-                    //Obtém o valor do campo "email"
-                    var email = document.getElementById('email').value;
-                    //Obtém o valor do campo "telefone"
-                    var telefone = document.getElementById('telefone'). value;
+    <script>
+        const form = document.querySelector("#form");
+        const nameInput = document.querySelector("#name");
+        const emailInput = document.querySelector("#email");
+        const messageTextarea = document.querySelector("#message");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
 
-                    //Verifica se todos os campos estão vazios ao mesmo tempo
-                    if (nome == "" && email == "" && telefone == "") {
-                        alert("Por favor, preencha todos os campos"); //Exibe um alerta para informar que todos os campos estão vazios
-                    }else {
-                        //Verifica individualmente se o campo "nome" está vazio
-                        if(nome == "") {
-                            alert("Informe o nome"); // Exibe um alerta caso o campo "nome" está vazio
-                        }
+            //verifica se o nome está vazio
+            if (nameInput.value === "") {
+                alert("Por favor, preencha o seu nome")
+                return;
+            }
 
-                        //Verifica individualmente se o campo "email" está vazio
-                        if(email == "" || !email.includes("@")) {
-                            alert("Informe um email válido");
-                        return;
-                        }
-                         //Exibe um alerta caso o campo "email" esteja vazio
-                        
+            // verifica se o e-mail está preenchido e se é válido
+            if (emailInput.value === "" || !isEmailValid(emailInput.value)) {
+                alert("Por favor, preencha o seu email");
+                return;
+            }
 
-                        //Verifica individualmente se o campo "Telefone" está vazio
-                        if(telefone == "") {
-                            alert("Informe o telefone"); // Exibe um alerta caso o campo "telefone" esteja vazio
-                        }
-                    }
+            //verifica se a mensagem está prenchida
+            if(messageTextarea.value === "") {
+                alert("Por favor, escreva uma mensagem");
+                return;
+            }
 
-                    // confirma que todos os campos foram preenchidos
-                    if(nome != "" && email != "" && telefone != "") {
-                        alert("Formulário enviado com sucesso!"); //Exibe um alerta de sucesso informando que o formulario foi enviado
-                    }
-                };
-            </script>
+            //se todos os campos estiverem corretamente preenchidos, envie o from 
+            form.submit();
+        });
+
+        //Função que valida e-mail
+        function isEmailValid(email) {
+
+            //criar uma regex para validar email
+            const emailRegex = new RegExp(
+                //usuario12@host.com.br    
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            );
+
+            if (emailRegex.test(email)) {
+                return true;
+            }
+
+            return false;
+        }
+    </script>
 
     <script src="jquery"></script>
-    <script src="aos.js"></script>
+    <script src="CSS/aos.js"></script>
     <script>
         function mostrarMenu() {
             //document.querySelector(".nav-menu") isso faz a mesma coisa de a linha 60
