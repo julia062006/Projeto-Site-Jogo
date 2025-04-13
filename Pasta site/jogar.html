@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Volta à Cova</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="imagens/logo-tipo.png">
+    <link rel="stylesheet" href="fontawesome-web/css/all.min.css">
+    <link rel="stylesheet" href="aos.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="scipts.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" title="Home" class="header-logo">
+
+            <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="index.html#home" title="Home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#narrativa" title="Sobre">Sobre</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#galeria de fotos" title="Galeria de Fotos">Galeria de Fotos</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#contato" title="Contato">Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="index.htmljogar.html" class="btn" title="Jogar">Jogar</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1 class="titulo">Jogar De Volta à Cova</h1>
+
+        </section>
+
+        <section id="narrativa">
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" class="imagem-footer">
+        </p>
+        <p>
+            Desenvolvido por Julia - Todos os direitos reservados
+        </p>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="aos.js"></script>
+    <script>
+        function mostrarMenu() {
+            //document.querySelector(".nav-menu") isso faz a mesma coisa de a linha 60
+            $(".header-nav").toggle(); //esse toggle mostra e desmostra a barra de navegar
+        }
+    </script>
+</body>
+
+</html>

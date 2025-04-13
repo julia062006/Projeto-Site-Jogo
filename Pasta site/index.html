@@ -12,14 +12,14 @@
 
     <link rel="shortcut icon" href="imagens/logo-tipo.png">
     <link rel="stylesheet" href="fontawesome-web/css/all.min.css">
-    <link rel="stylesheet" href="CSS/aos.min.css">
+    <link rel="stylesheet" href="aos.min.css">
     <link rel="stylesheet" href="CSS/style.css">
     <script src="scipts.js" defer></script>
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
+        
             <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" title="Home" class="header-logo">
 
             <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
@@ -29,19 +29,19 @@
             <nav class="header-nav">
                 <ul>
                     <li>
-                        <a href="index.html" title="Home">Home</a>
+                        <a href="#home" title="Home">Home</a>
                     </li>
 
                     <li>
-                        <a href="sobre.html" title="Sobre">Sobre</a>
+                        <a href="#sobre-game" title="Sobre">Sobre</a>
                     </li>
 
                     <li>
-                        <a href="galeria-fotos.html" title="Galeria de Fotos">Galeria de Fotos</a>
+                        <a href="#galeria de fotos" title="Galeria de Fotos">Galeria de Fotos</a>
                     </li>
 
                     <li>
-                        <a href="contato.html" title="Contato">Contato</a>
+                        <a href="#contato" title="Contato">Contato</a>
                     </li>
 
                     <li>
@@ -50,58 +50,84 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+        
     </header>
 
     <main>
-        <h1 class="titulo">Sobre o Jogo</h1>
-        <p class="paragrafo-sobre">
-            Descubra "De Volta à Cova", uma aventura emocionante onde você ajuda um zumbi a retornar à sua cova.
-            Possuíndo jogabilidade acessível para todas as idades. Prepare-se para a diversão!
-        </p>
-        <h1 class="titulo">Um pouco mais da história do Game</h1>
-        <p class="paragrafo-sobre">Durante o jogo ajude um zumbi a superar desafios em uma floresta. Explore duas fases
-            com obstáculos, enquanto coleta cérebros. Com gráficos vibrantes e trilha sonora envolvente garantem
-            diversão na aventura de voltar para casa!</p>
-        <img src="imagens/banner.png" alt="Objetos do Jogo" class="banner">
+        <section id="home">
+            <h1 class="titulo">Sobre "De Volta à Cova"</h1>
+            <p class="paragrafo-sobre">
+                Descubra "De Volta à Cova", uma aventura emocionante onde você ajuda um zumbi a retornar à sua cova.
+                Possuíndo jogabilidade acessível para todas as idades. Prepare-se para a diversão!
+            </p>
+            <h1 class="titulo">Um pouco mais da história do Jogo</h1>
+            <p class="paragrafo-sobre">Durante o jogo ajude um zumbi a superar desafios em uma floresta. Explore duas
+                fases
+                com obstáculos, enquanto coleta cérebros. Com gráficos vibrantes e trilha sonora envolvente garantem
+                diversão na aventura de voltar para casa!</p>
+            <img src="imagens/bannermenor.png" alt="Objetos do Jogo" class="banner">
+        </section>
 
-        <h1 class="titulo">Narrativa</h1>
-        <p class="paragrafo-sobre">
-            De Volta à Cova é um jogo de aventura/plataforma, na qual o Zombie despertou em uma floresta desconhecida.
-            Agora, ele precisa retornar à sua cova, enfrentando
-            o Caçador e superando desafios ao longo da trajetória.
-            Durante sua jornada, use sua astúcia e habilidades para desviar dos perigos. Complete as duas fases,
-            coletando sua comida preferida.
-            <br>Com jogabilidade fácil, De Volta à Cova foi pensado em agradar jogadores de várias idades. Prepare-se
-            para aventura!
-        </p>
+        <section id="sobre-game">
+            <h1 class="titulo">Sobre o Game</h1>
+            <p class="paragrafo-sobre">
+                De Volta à Cova é um jogo de aventura/plataforma, na qual o Zombie despertou em uma floresta
+                desconhecida.
+                Agora, ele precisa retornar à sua cova, enfrentando
+                o Caçador e superando desafios ao longo da trajetória.
+                Durante sua jornada, use sua astúcia e habilidades para desviar dos perigos. Complete as duas fases,
+                coletando sua comida preferida.
+                <br>Com jogabilidade fácil, De Volta à Cova foi pensado em agradar jogadores de várias idades.
+                Prepare-se
+                para aventura!
+            </p>
 
-        <a href="jogar.html" class="btn-jogar" title="Jogar">Jogar</a>
-        <h1 class="titulo">Galeria de fotos</h1>
-        <!--aqui colocar as imagens do jogo<div>
+            <a href="jogar.html" class="btn-jogar" title="Jogar">Jogar</a>
+        </section>
 
-            </div> -->
+        <section id="galeria de fotos">
+            <h1 class="titulo">Galeria de fotos</h1>
 
-        <h1 class="titulo">Contato</h1>
-        <form id="form">
-            <label for="name">Digite seu nome:</label>
-            <input type="text" id="name">
+            <div>
+                <img src="imagens/imagem 1.png" alt="Tela Inicial" class="galeria-imagem">
+            </div>
+            <div>
+                <img src="imagens/imagem 2.png" alt="Tela de História" class="galeria-imagem">
+            </div>
+            <div>
+                <img src="imagens/imagem 3.png" alt="Tela Fase 1" class="galeria-imagem">
+            </div>
+            <div>
+                <img src="imagens/imagem 4.png" alt="Tela Game Over" class="galeria-imagem">
+            </div>
+        </section>
 
-            <label for="email">Digite seu e-mail:</label>
-            <input type="email" id="email">
+        <section id="contato">
+            <h1 class="titulo">Contato</h1>
+            <form id="form">
+                <label for="name">Digite seu nome:</label>
+                <input type="text" id="name">
+                <br>
 
-            <label for="message">Mensagem:</label>
-            <textarea name="message" id="message"></textarea>
+                <label for="email">Digite seu e-mail:</label>
+                <input type="email" id="email">
+                <br>
 
-            <button type="submit">Enviar</button>
-        </form>
+                <label for="message">Mensagem:</label>
+                <textarea name="message" id="message"></textarea>
+                <br>
+
+                <button type="submit">Enviar</button>
+                <br>
+            </form>
+        </section>
     </main>
 
     <footer class="footer">
         <p>
             <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" class="imagem-footer">
         </p>
-        <p>
+        <p class="direitos-reservados">
             Desenvolvido por Julia - Todos os direitos reservados
         </p>
     </footer>
@@ -127,7 +153,7 @@
             }
 
             //verifica se a mensagem está prenchida
-            if(messageTextarea.value === "") {
+            if (messageTextarea.value === "") {
                 alert("Por favor, escreva uma mensagem");
                 return;
             }
@@ -153,8 +179,8 @@
         }
     </script>
 
-    <script src="jquery"></script>
-    <script src="CSS/aos.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="aos.js"></script>
     <script>
         function mostrarMenu() {
             //document.querySelector(".nav-menu") isso faz a mesma coisa de a linha 60

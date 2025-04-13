@@ -8,6 +8,7 @@ body {
     font-family: "Jersey 15", Arial;
     color: #333;
     font-size: 18px;
+    scroll-padding-top: 120px; /* <-- essa linha resolve o problema da âncora */
 }
 
 /* HEADER FIXO NO TOPO */
@@ -17,6 +18,7 @@ body {
     background-color: #222;
     z-index: 1000;
     top: 0;
+    padding-bottom: 10px;
 }
 
 /* CONTAINER GERAL DO HEADER */
@@ -32,7 +34,7 @@ body {
 
 /* LOGO */
 .header-logo {
-    height: 50px;
+    height: 65px;
 }
 
 /* BOTÃO HAMBURGUER (3 BARRAS) */
@@ -44,7 +46,8 @@ body {
     position: absolute;
     right: 0;
     top: 5px;
-    display: block; /* aparece no mobile por padrão */
+    display: block;
+    /* aparece no mobile por padrão */
     cursor: pointer;
 }
 
@@ -52,12 +55,15 @@ body {
 .header-nav {
     display: none;
     background-color: #222;
-    width: 100%;
-    padding: 10px;
-    flex-direction: column;
-    position: relative;
-    right: 0;
+    padding-bottom: 10px;
+    
+    position: absolute;
     top: 100%;
+    right: 0;
+    left: 0;
+    float: right;
+    text-align: center;
+    z-index: 999;
 }
 
 .header-nav ul {
@@ -96,6 +102,10 @@ body {
     display: inline-block;
 }
 
+.btn:hover {
+    margin-bottom: 0 !important;
+}
+
 .btn-jogar {
     background-color: rgb(59, 111, 59);
     color: white;
@@ -107,27 +117,35 @@ body {
     width: 200px;
 }
 
+section {
+    scroll-margin-top: 170px;
+}
+
 main {
     width: auto;
-    padding-top: 100px;
     color: black;
     background-color: rgb(231, 231, 231);
     text-align: center;
+    padding-top: 100px;
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 15px;
     letter-spacing: 0.5px;
-   
+
 }
 
 .titulo {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
     padding: 10px;
-    margin: 25px;
+    gap: 30px;
+    margin: 15px;
     width: 300px;
     text-transform: uppercase;
     text-align: center;
     color: rgb(59, 111, 59);
-    display: inline-block; 
+    display: inline-block;
     border-radius: 10px;
     margin-top: 15px;
     box-shadow: 10px 5px 10px rgb(106, 3, 225);
@@ -143,7 +161,7 @@ p {
     gap: 0.2rem;
     width: 350px;
     margin: 0 auto;
-   
+
 }
 
 label {
@@ -151,10 +169,12 @@ label {
     margin-bottom: 5px;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     width: 100%;
     padding: 2px;
-    border: 1px solid black ;
+    border: 1px solid black;
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -174,10 +194,17 @@ button {
     margin-top: 15px;
 }
 
-.banner {
+.bannermenor {
     height: 400px;
     padding-bottom: 1px;
 
+}
+
+.galeria-imagem {
+    width: 300px;
+    text-align: center;
+    flex-direction: column;
+    padding: 9px;
 }
 
 
@@ -186,13 +213,15 @@ button {
     color: white;
     text-align: center;
     padding: 20px;
-    bottom: 0;
+    width: calc(100% + 20px);
+    /*bottom: 0;
     width: 100%;
     display: flex;
-    flex-direction: column; /* empilha a logo e o texto */
-    align-items: center;
+    flex-direction: column;
+    /* empilha a logo e o texto */
+    /*align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 10; */
 }
 
 .imagem-footer {
@@ -206,18 +235,19 @@ button {
 /* DESKTOP */
 @media screen and (min-width: 1000px) {
     .header {
-        display: flex;
+        display: block;
         justify-content: space-between;
         align-items: center;
-        padding: 0 40px;
+        padding: 0 0px;
     }
-    
+
     .header-menu {
-        display: none; /* Esconde o menu hamburguer no desktop */
+        display: none;
+        /* Esconde o menu hamburguer no desktop */
     }
 
     .header-logo {
-        height: 80px;
+        height: 100px;
     }
 
     .header-nav {
@@ -241,6 +271,7 @@ button {
     }
 
     .header-nav li {
+       
         padding: 10px;
         display: inline-block;
     }
@@ -253,76 +284,167 @@ button {
         color: white;
         border-bottom: 5px solid rgb(59, 111, 59);
     }
+
     .header-nav ul li a {
         white-space: nowrap;
     }
 
     main {
-        padding-top: 180px;
+        padding-top: 200px;
         color: black;
         text-align: center;
+        width: auto;
+        background-color: white;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 30px;
+        letter-spacing: 1px;
+        width: 1000px;
+        margin: 30px auto;
     }
 
-    .footer {
-        background-color: #333;
-    color: white;
+    /*main {
+    width: auto;
+    padding-top: 100px;
+    color: black;
+    background-color: rgb(231, 231, 231);
     text-align: center;
-    padding: 10px 20px;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* alinha verticalmente */
-    justify-content: center; /* imagem à esquerda e texto à direita */
-    height: auto;
-    }
-
-    .imagem-footer {
-        height: 40px;
-        margin-bottom: 5px;
-    }
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 15px;
+    letter-spacing: 0.5px;*/
 
     .titulo {
-        background-color: rgb(59, 111, 59);
         padding: 10px;
-        margin: 0 auto;
-        width: 200px;
+        margin: 30px;
+        width: 400px;
         text-transform: uppercase;
         text-align: center;
-        color: white;
-        display: inline-block; 
+        color: rgb(59, 111, 59);
+        display: inline-block;
+        border-radius: 10px;
+        margin-top: 20px;
+        flex-direction: column;
+        box-shadow: 10px 5px 10px rgb(106, 3, 225);
     }
+
+    /*padding: 10px;
+    margin: 25px;
+    width: 300px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(59, 111, 59);
+    display: inline-block; 
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 10px 5px 10px rgb(106, 3, 225);*/
+
+    .bannermenor {
+
+        height: 600px;
+        margin-left: 338px;
+        padding-bottom: 0px;
+    }
+
+    /*.banner {
+        height: 400px;
+        padding-bottom: 1px;
+    }*/
+
+    .galeria-imagem {
+        width: 700px;
+    }
+
     .form {
         display: flex;
         flex-direction: column;
-        gap: .5rem;
-        width: 400px;
+        gap: 0.5rem;
+        width: 500px;
         margin: 0 auto;
-       
+
     }
-    
+
+    /*.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 350px;
+    margin: 0 auto;*/
+
     label {
         font-weight: bold;
         margin-bottom: 5px;
     }
-    
-    input, select {
+
+    input,
+    select,
+    textarea {
         width: 100%;
-        padding: 10px;
-        border: 1px solid black ;
+        padding: 12px;
+        border: 1px solid black;
         border-radius: 5px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        margin: 10px 0;
+        box-sizing: border-box;
+
     }
+
     
+
+    /*input, select, textarea {
+    width: 100%;
+    padding: 2px;
+    border: 1px solid black ;
+    border-radius: 5px;
+    font-size: 1rem;*/
+
     button {
         color: white;
         background-color: rgb(27, 208, 132);
         width: 100px;
         text-align: center;
-        margin: 10px auto;
+        margin: 100px auto;
         padding: 10px 20px;
         border-radius: 10px;
         border: none;
         cursor: pointer;
+        margin-top: 10px; 
+    }
+
+    /*button {
+    color: white;
+    background-color: rgb(27, 208, 132);
+    width: 100px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+}*/
+
+    .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 20px;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* alinha verticalmente */
+        justify-content: center;
+        /* imagem à esquerda e texto à direita */
+        height: 180px;
+    }
+
+    .imagem-footer {
+        height: 80px;
+        margin-bottom: 5px;
+        margin-top: 50px;
+    }
+    .direitos-reservados {
+        margin-bottom: 80px;
     }
 }
