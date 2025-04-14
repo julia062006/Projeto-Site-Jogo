@@ -152,6 +152,7 @@
                 return;
             }
 
+
             //verifica se a mensagem está prenchida
             if (messageTextarea.value === "") {
                 alert("Por favor, escreva uma mensagem");
@@ -160,6 +161,8 @@
 
             //se todos os campos estiverem corretamente preenchidos, envie o from 
             form.submit();
+            alert("Mensagem enviada com sucesso");
+            return;
         });
 
         //Função que valida e-mail
