@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Volta à Cova</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="imagens/logo-tipo.png">
+    <link rel="stylesheet" href="fontawesome-web/css/all.min.css">
+    <link rel="stylesheet" href="aos.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="scipts.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        
+            <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" title="Home" class="header-logo">
+
+            <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="#home" title="Home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre-game" title="Sobre">Sobre</a>
+                    </li>
+
+                    <li>
+                        <a href="#galeria" title="Galeria de Fotos">Galeria de Fotos</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato" title="Contato">Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="De Volta a Cova jogo/index.html"target="_blanck" class="btn" title="Jogar">Jogar</a>
+
+                    </li>
+                </ul>
+            </nav>
+        
+    </header>
+
+    <main>
+        <section id="home">
+            <h1 class="titulo">Sobre "De Volta à Cova"</h1>
+            <p class="paragrafo-sobre">
+                Descubra "De Volta à Cova", uma aventura emocionante onde você ajuda o Zombie a retornar à sua cova.
+                Possuíndo jogabilidade acessível para diversas idades. Prepare-se para a diversão!
+            </p>
+            <h1 class="titulo">Um pouco mais da história do Jogo</h1>
+            <p class="paragrafo-sobre">Durante o jogo ajude um zumbi a superar desafios em uma floresta. Explore duas
+                fases
+                com obstáculos, enquanto coleta cérebros. Com gráficos vibrantes e trilha sonora envolvente garantem
+                diversão na aventura de voltar para casa!</p>
+            <img src="imagens/bannermenor.png" alt="Objetos do Jogo" class="banner">
+        </section>
+
+        <section id="sobre-game">
+            <h1 class="titulo">Sobre o Game</h1>
+            <p class="paragrafo-sobre">
+                De Volta à Cova é um jogo de aventura/plataforma, na qual o Zombie despertou em uma floresta
+                desconhecida.
+                Agora, ele precisa retornar à sua cova, enfrentando
+                o Caçador e superando desafios ao longo da trajetória.
+                Durante sua jornada, use sua astúcia e habilidades para desviar dos perigos. Complete as duas fases,
+                coletando sua comida preferida.
+                <br>Com jogabilidade fácil, De Volta à Cova foi pensado em agradar jogadores de várias idades.
+                Prepare-se
+                para aventura!
+            </p>
+
+            <a href="jogar.html" class="btn-jogar" title="Jogar">Jogar</a>
+            <br>
+
+            <h1 class="titulo">Sobre a criadora</h1>
+            <img src="imagens/foto julai.png" alt="Foto da criadora" class="foto-julia">
+            <p class="paragrafo-sobre">
+                Meu nome é Julia Rubim Keller, tenho 18 anos e nasci em Araruna, Paraná. Minha trajetória educacional foi marcada por instituições públicas, e concluí o ensino médio no Colégio Estadual Princesa Isabel. Durante minha formação, tive a oportunidade de  ter uma matéria voltada para a programação, utilizando a plataforma Alura, o que despertou meu interesse pela área de tecnologia. Neste momento, estou cursando Analise e Desenvolvimento de Sistemas, no Centro Educacional Integrado.
+
+                Atualmente, ainda não possuo experiência profissional, mas estou determinada a buscar um estágio em breve para iniciar minha carreira.
+            </p>
+        </section>
+
+        <section id="galeria">
+            <h1 class="titulo">Galeria de fotos</h1>
+
+            <div>
+                <img src="imagens/imagem 1.png" alt="Tela Inicial" class="galeria-imagem">
+            </div>
+            <div>
+                <img src="imagens/imagem 2.png" alt="Tela de História" class="galeria-imagem">
+            </div>
+            <div>
+                <img src="imagens/imagem 3.png" alt="Tela Fase 1" class="galeria-imagem">
+            </div>
+            <div>
+                <img src="imagens/imagem 4.png" alt="Tela Game Over" class="galeria-imagem">
+            </div>
+        </section>
+
+        <section id="contato">
+            <h1 class="titulo">Contato</h1>
+            <form id="form">
+                <label for="name">Digite seu nome:</label>
+                <input type="text" id="name">
+                <br>
+
+                <label for="email">Digite seu e-mail:</label>
+                <input type="email" id="email">
+                <br>
+
+                <label for="message">Mensagem:</label>
+                <textarea name="message" id="message"></textarea>
+                <br>
+
+                <button type="submit">Enviar</button>
+                <br>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" class="imagem-footer">
+        </p>
+        <p class="direitos-reservados">
+            Desenvolvido por Julia - Todos os direitos reservados
+        </p>
+    </footer>
+
+    <script>
+        const form = document.querySelector("#form");
+        const nameInput = document.querySelector("#name");
+        const emailInput = document.querySelector("#email");
+        const messageTextarea = document.querySelector("#message");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            //verifica se o nome está vazio
+            if (nameInput.value === "") {
+                alert("Por favor, preencha o seu nome")
+                return;
+            }
+
+            // verifica se o e-mail está preenchido e se é válido
+            if (emailInput.value === "" || !isEmailValid(emailInput.value)) {
+                alert("Por favor, preencha o seu email");
+                return;
+            }
+
+
+            //verifica se a mensagem está prenchida
+            if (messageTextarea.value === "") {
+                alert("Por favor, escreva uma mensagem");
+                return;
+            }
+
+            //se todos os campos estiverem corretamente preenchidos, envie o from 
+            form.submit();
+            alert("Mensagem enviada com sucesso");
+            return;
+        });
+
+        //Função que valida e-mail
+        function isEmailValid(email) {
+
+            //criar uma regex para validar email
+            const emailRegex = new RegExp(
+                //usuario12@host.com.br    
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            );
+
+            if (emailRegex.test(email)) {
+                return true;
+            }
+
+            return false;
+        }
+    </script>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="aos.js"></script>
+    <script>
+        function mostrarMenu() {
+            //document.querySelector(".nav-menu") isso faz a mesma coisa de a linha 60
+            $(".header-nav").toggle(); //esse toggle mostra e desmostra a barra de navegar
+        }
+    </script>
+</body>
+
+</html>
