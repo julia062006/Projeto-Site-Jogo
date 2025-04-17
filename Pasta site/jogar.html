@@ -19,7 +19,7 @@
 
 <body>
     <header class="header">
-        <div class="container">
+         
             <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" title="Home" class="header-logo">
 
             <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
@@ -33,11 +33,11 @@
                     </li>
 
                     <li>
-                        <a href="index.html#narrativa" title="Sobre">Sobre</a>
+                        <a href="index.html#sobre-game" title="Sobre">Sobre</a>
                     </li>
 
                     <li>
-                        <a href="index.html#galeria de fotos" title="Galeria de Fotos">Galeria de Fotos</a>
+                        <a href="index.html#galeria" title="Galeria de Fotos">Galeria de Fotos</a>
                     </li>
 
                     <li>
@@ -50,20 +50,21 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+        
     </header>
 
     <main>
         <section>
             <h1 class="titulo">Jogar De Volta à Cova</h1>
 
-        </section>
-
-        <section id="narrativa">
-
+            <iframe id="gameFrame" class="iframe-jogo" src="De Volta a Cova jogo/index.html"></iframe>
+            <p>
+                <button onclick="entarFullscreen()" class="btn-jogar">Tela cheia</button>
+            </p>
         </section>
     </main>
 
+  
     <footer class="footer">
         <p>
             <img src="imagens/De-Volta-Cova-02-04-2025.png" alt="Logo De Volta à Cova" class="imagem-footer">
@@ -72,6 +73,21 @@
             Desenvolvido por Julia - Todos os direitos reservados
         </p>
     </footer>
+
+    <script>
+        function entarFullscreen () {
+            const iframe = document.getElementById('gameFrame');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen(); //verificação se o navegador suporta
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen(); //mozila
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen(); // chrome, safari e opera
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen(); // ultimo caso, internet explorer e edge
+            }
+        }
+    </script>
 
     <script src="js/jquery.js"></script>
     <script src="aos.js"></script>

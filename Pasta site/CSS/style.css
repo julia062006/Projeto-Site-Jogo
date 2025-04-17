@@ -124,7 +124,7 @@ section {
 main {
     width: auto;
     color: black;
-    background-color: rgb(231, 231, 231);
+    background-color: white;
     text-align: center;
     padding-top: 100px;
     padding-left: 30px;
@@ -206,6 +206,7 @@ button {
     padding-bottom: 0px;
     margin-top: 15px;
     margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 .galeria-imagem {
@@ -213,6 +214,11 @@ button {
     text-align: center;
     flex-direction: column;
     padding: 9px;
+    border-radius: 20px;
+}
+
+.iframe-jogo {
+    margin-top: 20px;
 }
 
 
@@ -344,6 +350,7 @@ button {
         gap: 0.5rem;
         width: 500px;
         margin: 0 auto;
+        border-radius: 100px;
 
     }
 
@@ -363,6 +370,14 @@ button {
         margin: 10px 0;
         box-sizing: border-box;
 
+    }
+
+    .iframe-jogo {
+        display: block;
+        width: 600px;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 20px; /* espaço entre o título e o iframe */
     }
 
     button {
@@ -402,4 +417,8 @@ button {
     .direitos-reservados {
         margin-bottom: 80px;
     }
+
+    #home #sobre-game #galeria #contato {
+        scroll-margin-top: 120px; /* Ou ajusta com base na altura do header */
+      }
 }
