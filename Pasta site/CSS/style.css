@@ -298,6 +298,10 @@ button {
         white-space: nowrap;
     }
 
+    section {
+        scroll-margin-top: 170px;
+      }
+
     main {
         padding-top: 200px;
         color: black;
@@ -418,7 +422,5 @@ button {
         margin-bottom: 80px;
     }
 
-    #home #sobre-game #galeria #contato {
-        scroll-margin-top: 120px; /* Ou ajusta com base na altura do header */
-      }
+    
 }
